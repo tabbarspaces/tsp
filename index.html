@@ -1,137 +1,170 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Architecture Firm - Under Maintenance</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Firm - Under Maintenance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    overflow: hidden;
-    color: white;
-  }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            color: white;
+        }
 
-  #page-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
+        #page-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-  .barricade-strip {
-  flex-shrink: 0;
-  background-color: black;
-  color: #f4c00e;
-  padding: 1.5vh;
-  background-image: linear-gradient(
-    135deg,
-    #f4c00e 25%,
-    black 25%,
-    black 50%,
-    #f4c00e 50%,
-    #f4c00e 75%,
-    black 75%
-  );
-  background-size: 56px 56px; /* Adjusted background size for smoother animation */
-  animation: moveStripes 2s linear infinite; /* Changed to 'linear' for a constant speed */
-}
+        .barricade-strip {
+            flex-shrink: 0;
+            background-color: black;
+            color: #f4c00e;
+            padding: 1.5vh;
+            background-image: linear-gradient(135deg,
+                    #f4c00e 25%,
+                    black 25%,
+                    black 50%,
+                    #f4c00e 50%,
+                    #f4c00e 75%,
+                    black 75%);
+            background-size: 56px 56px;
+            /* Adjusted background size for smoother animation */
+            animation: moveStripes 2s linear infinite;
+            /* Changed to 'linear' for a constant speed */
+        }
 
-@keyframes moveStripes {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 56px 0;
-    }
-}
+        @keyframes moveStripes {
+            0% {
+                background-position: 0 0;
+            }
 
-  .horizontal-line {
-    background-color: #f4c00e;
-    height: 4px;
-    margin-top: 10px;
-  }
+            100% {
+                background-position: 56px 0;
+            }
+        }
 
-  .horizontal-line-top {
-    background-color: #f4c00e;
-    height: 4px;
-    margin-bottom: 10px; /* Space between the line and the strip below */
-  }
+        .horizontal-line {
+            background-color: #f4c00e;
+            height: 4px;
+            margin-top: 10px;
+        }
 
-  .content {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw;
-    overflow: auto;
-    flex-direction: column;
-  }
+        .horizontal-line-top {
+            background-color: #f4c00e;
+            height: 4px;
+            margin-bottom: 10px;
+            /* Space between the line and the strip below */
+        }
 
-  .under-maintenance {
-    font-size: 5vw;
-    margin-bottom: 1em;
-    font-weight: bold;
-    font-style: italic;
-    text-transform: uppercase;
-    color: #f4c00e; /* Yellow font color */
-  }
+        .content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2vw;
+            overflow: auto;
+            flex-direction: column;
+        }
 
-  .info {
-    font-size: 2vw;
-    color: white; /* Yellow font color */
-    margin-bottom: 10px; /* Adjusted margin */
-  }
+        .under-maintenance {
+            font-size: 5vw;
+            margin-bottom: 1em;
+            font-weight: bold;
+            font-style: italic;
+            text-transform: uppercase;
+            color: #f4c00e;
+            /* Yellow font color */
+        }
 
-  .contact-info {
-    font-size: 1.5vw;
-    color: white; /* Yellow font color */
-  }
+        .info {
+            font-size: 2vw;
+            color: white;
+            /* Yellow font color */
+            margin-bottom: 10px;
+            /* Adjusted margin */
+        }
 
-  @media (min-width: 992px) {
-    .barricade-strip {
-      padding: 20px;
-      background-size: 56px 56px;
-    }
+        .contact-info {
+            font-size: 1.5vw;
+            color: white;
+            /* Yellow font color */
+        }
 
-    .under-maintenance {
-      font-size: 2.5rem;
-      margin-bottom: 0.5em;
-    }
+        .contact-info a {
+            color: white;
+        }
 
-    .info {
-      font-size: 1.25rem;
-    }
+        @media (min-width: 992px) {
+            .barricade-strip {
+                padding: 20px;
+                background-size: 56px 56px;
+            }
 
-    .contact-info {
-      font-size: 1rem;
-    }
-  }
+            .under-maintenance {
+                font-size: 2.5rem;
+                margin-bottom: 0.5em;
+            }
 
-</style>
+            .info {
+                font-size: 1.25rem;
+            }
+
+            .contact-info {
+                font-size: 1rem;
+            }
+        }
+
+        /* Your existing CSS styles */
+
+        /* Media query for devices with a maximum width of 767px (typical mobile devices) */
+        @media (max-width: 767px) {
+            .under-maintenance {
+                font-size: 7vw;
+                /* Increase font size for mobile */
+            }
+
+            .info {
+                font-size: 3vw;
+                /* Increase font size for mobile */
+            }
+
+            .contact-info {
+                font-size: 2vw;
+                /* Increase font size for mobile */
+            }
+        }
+    </style>
 </head>
+
 <body>
-<div id="page-container">
-  <div class="barricade-strip"></div> <!-- Top stripe -->
-  <div class="horizontal-line"></div> <!-- Horizontal line below top strip -->
-  <div class="content">
-    <div class="under-maintenance">Website under construction</div>
-    <div class="info">
-      For any further queries reach out to <strong>Ar. Bhavjeet Singh Arora</strong>
+    <div id="page-container">
+        <div class="barricade-strip"></div> <!-- Top stripe -->
+        <div class="horizontal-line"></div> <!-- Horizontal line below top strip -->
+        <div class="content">
+            <div class="under-maintenance">Website under construction</div>
+            <div class="info">
+                For any further queries reach out to <strong>Ar. Bhavjeet Singh Arora</strong>
+            </div>
+            <div class="contact-info"><i class="fas fa-phone-alt"></i> +91 6392338372</div>
+        </div>
+        <div class="horizontal-line-top"></div> <!-- Horizontal line on top of bottom strip -->
+        <div class="barricade-strip"></div> <!-- Bottom stripe -->
     </div>
-    <div class="contact-info"><i class="fas fa-phone-alt"></i> +91 6392338372</div>
-  </div>
-  <div class="horizontal-line-top"></div> <!-- Horizontal line on top of bottom strip -->
-  <div class="barricade-strip"></div> <!-- Bottom stripe -->
-</div>
 </body>
+
 </html>
