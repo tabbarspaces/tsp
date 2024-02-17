@@ -1,1 +1,117 @@
-﻿hello sahaj
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture Firm - Under Construction</title>
+<style>
+  * {
+    box-sizing: border-box; /* Ensures padding doesn't affect overall dimensions */
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Fill the full viewport height */
+    background-color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden; /* Prevent scrolling */
+  }
+
+  #page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .barricade-strip {
+    flex-shrink: 0; /* Prevents the strips from shrinking */
+    background-color: black;
+    color: yellow;
+    padding: 1vw;
+    background-image: linear-gradient(
+      135deg,
+      yellow 25%,
+      black 25%,
+      black 50%,
+      yellow 50%,
+      yellow 75%,
+      black 75%
+    );
+    background-size: 56px 56px;
+    animation: moveStripes 2s linear infinite;
+  }
+
+  @keyframes moveStripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 56px 0;
+    }
+  }
+
+  .content {
+    flex-grow: 1; /* Allows the content to grow and fill available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vw;
+    overflow: auto; /* In case the content does need to scroll */
+  }
+
+  .under-construction {
+    font-size: 3vw; /* Dynamic text size */
+    margin-bottom: 20px;
+  }
+
+  .info {
+    margin: 1vw;
+    font-size: 1vw; /* Dynamic text size */
+  }
+
+  /* @media (max-width: 768px) {
+    .under-construction {
+      font-size: 1.5em;
+    }
+    .info {
+      margin: 10px;
+    }
+  } */
+
+
+  /* Larger screens may need a cap to the size */
+  @media (min-width: 992px) {
+    /* .barricade-strip {
+      padding: 20px; /* Fixed size for larger screens
+      background-size: 112px 112px; /* Ensuring seamless tiling of background
+    } */
+
+    .under-construction {
+      font-size: 3rem; /* Capped size for larger screens */
+    }
+
+    .info {
+      font-size: 1.25rem; /* Capped size for larger screens */
+    }
+  }
+
+
+</style>
+</head>
+<body>
+<div id="page-container">
+  <div class="barricade-strip"></div> <!-- Top stripe -->
+  <div class="content">
+    <div class="under-construction">Under Construction</div>
+    <div class="info">
+      Our website is currently being built.<br>
+      Please check back soon!
+    </div>
+  </div>
+  <div class="barricade-strip"></div> <!-- Bottom stripe -->
+</div>
+</body>
+</html>
